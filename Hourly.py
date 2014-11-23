@@ -26,6 +26,6 @@ class Hourly(Employee):
             pay = self.__hours * TIME_AND_HALF
         return pay
 
-    def __str(self):
+    def __str__(self):
         return "Hours worked this week: " + str(self.__hours) + \
-               Employee.__str__(self)
+               "\n" + Employee.__str__(self)

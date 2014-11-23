@@ -18,4 +18,4 @@ class Manager(Salary):
 
     def __str__(self):
         return "Bonus: " + str(self.__bonus) + \
-               Salary.__str__(self)
+               "\n" + Salary.__str__(self)

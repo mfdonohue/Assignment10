@@ -18,4 +18,4 @@ class Salary(Employee):
 
     def __str__(self):
         return "Salary: " + str(self.__salary) + \
-               Employee.__str__(self)
+               "\n" + Employee.__str__(self)
