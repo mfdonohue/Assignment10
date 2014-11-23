@@ -1,0 +1,12 @@
+# Donohue, Mark, Kasliwal, Mannan, Hamel, David
+# CS110, Section # respect to name: A53, A53, A52
+# Assignment 10 Algorithm
+
+# Algorithm:
+# 1. Ask user if they are an hourly or salary employee
+# 2. If user is hourly, ask for hours worked
+# 3. If user is salary, ask for salary
+# 4. If salary, ask if manager
+# 5. Based on input, create instance of respective class
+# 6. Perform correct calculations for the employee
+# 7. Print pay of employee
