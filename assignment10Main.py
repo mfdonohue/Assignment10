@@ -2,27 +2,8 @@
 # CS110 A53
 # Assignment 10
 
-
 from Manager import*
 from Hourly import*
-
-
-def getHourlyInfo():
-    goAgain = 'y'
-    while goAgain == 'y':
-        try:       
-            hours = float(input("Enter the number of hours worked this week: "))
-            hourlyEmployee = Hourly("Mark Donohue", "12", hours)
-            print(hourlyEmployee)
-            print("Your pay is", hourlyEmployee.calculatePay(hours))
-            goAgain = 'n'
-        
-        except ValueError:
-            print("You didn't enter a valid number.")
-
-        except:
-            print("An error occurred.")
-            goAgain = 'n'
 
 def getSalaryInfo():
     goAgain = 'y'
@@ -59,6 +40,19 @@ def getManager():
             print("An error occurred.")
             goAgain = 'n'
 
+def getHourlyInfo(hours):
+    goAgain = 'y'
+    while goAgain == 'y':
+        try:       
+            hourlyEmployee = Hourly("Mark Donohue", "12", hours)
+            print(hourlyEmployee)
+            print("Your pay is", hourlyEmployee.calculatePay(hours))
+            goAgain = 'n'
+
+        except:
+            print("An error occurred.")
+            goAgain = 'n'
+
 def hourlyOrSalary():
     
     try:
@@ -78,7 +72,7 @@ def hourlyOrSalary():
             status = input("Enter 'Hourly' or 'Salary' here: ")
 
             if status.lower() == "hourly":
-                getHourlyInfo()
+                getHourlyInfo(hours)
                 goAgain = 'n'
 
             elif status.lower() == "salary":
